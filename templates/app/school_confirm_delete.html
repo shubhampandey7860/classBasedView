@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+
+{% block body_block %}
+  <h1>Are you sure to delete {{sc}} </h1>
+  <form method="POST">
+
+    {% csrf_token %}
+    <input type="submit"value='Yes'class='btn btn-danger'>
+
+  </form>
+  <a href="{% url 'SchoolList' %}">No go back </a>
+
+{% endblock %}  
